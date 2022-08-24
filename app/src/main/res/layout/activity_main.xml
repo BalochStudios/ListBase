@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnDelete"
+        >
+
+    <RelativeLayout
+        android:id="@+id/llAddItem"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:textColor="#212121"
+        android:backgroundTint="#4B949494"
+        />
+
+        <EditText
+            android:id="@+id/etAddList"
+            android:layout_width="wrap_content"
+            android:hint="Task to Add"
+            android:layout_marginLeft="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_toRightOf="@id/btnAdd"
+            android:layout_toEndOf="@id/btnAdd"
+            android:layout_height="wrap_content"
+           />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/btnAdd"
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Done"
+        android:textColor="#212121"
+        android:padding="4dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#4B949494"/>
+
+</RelativeLayout>
